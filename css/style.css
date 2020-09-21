@@ -28,7 +28,7 @@ h1{
   color: #c12258;
   font-size: 2em;
   text-align: center;
-  line-height: 4em;
+  line-height: 200%;
 }
 
 caption{
@@ -37,7 +37,6 @@ caption{
 
 p{
   padding-top: 15px;
-
 }
 
 a{
@@ -51,6 +50,7 @@ a{
 table{
     border: 2px solid #000000;
     margin: auto;
+    border-radius:10px;
 }
 /* Table cells have centered text with a 2px black border on only one side (the top), and 10px padding on all sides. */
 
@@ -91,11 +91,11 @@ tr{
 
 }
 
-tr:nth-child(odd)  {
+tr:nth-child(even)  {
   background-color: #D1D1D1;
 }
 
-tr:nth-child(even)  {
+tr:nth-child(odd)  {
   background-color: transparent;
 }
 
@@ -104,7 +104,23 @@ tr:hover{
 }
 
 
-thead tr:first-child th:first-child{}
+thead tr:first-child th:first-child{
+  border-top-left-radius: 10px;
+}
+
+thead tr:first-child th:last-child{
+  border-top-right-radius: 10px;
+}
+	
+	table tr:last-child td:first-child 
+	{
+		border-bottom-left-radius: 10px;
+	}
+	
+	table tr:last-child td:last-child 
+	{
+		border-bottom-right-radius: 10px;
+	}
 
 footer{
   width:100%;
@@ -112,5 +128,8 @@ footer{
   text-align:center;
   color: #FFFFFF;
   min-height: 75px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
